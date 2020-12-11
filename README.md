@@ -1,1 +1,1 @@
-# swift-bridging-header-generator
+# Swift Bridging Header Generator
