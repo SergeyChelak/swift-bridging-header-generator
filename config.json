@@ -1,0 +1,7 @@
+{
+    "product": "SuperProject",
+    "root": "/Users/john.smith/SuperProject",
+    "author": "John Smith",
+    "output": "/Users/john.smith/SuperProject",
+    "exclude": ["libs", "build"]
+}
