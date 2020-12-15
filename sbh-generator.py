@@ -209,6 +209,8 @@ def generate_bridge(configuration: Configuration, header_list: list) -> bool:
 def print_short_usage():
     print("You did something wrong.\nUse --help for details")
 
+def option_description_str(option: str, description: str) -> str:
+    return "\t{0:<20} {1}".format(option, description)
 
 def print_help():
     arr = [        
@@ -216,13 +218,13 @@ def print_help():
         "python sbh-generator.py <options>",
         "",
         "Options:",
-        "\t{0:<20} Optional, specifies path to project root folder. Default is current folder".format("--root=<path>"),
-        "\t{0:<20} Required, name will used to generate title of bridging header and for generating".format("--product=<name>"),
-        "\t{0:<20} Optional, specifies path to result bridging header. Default is current folder".format("--output=<path>"),
-        "\t{0:<20} Optional, use this option to force assign output file name".format("--filename=<name>"),
-        "\t{0:<20} Optional. Use to provide name as author in comment into output file".format("--author=<name>"),
-        "\t{0:<20} Generate bridging header with parameters from file".format("--config=filename"),
-        "\t{0:<20} Show this help".format("--help"),
+        option_description_str("--root=<path>", "Optional, specifies path to project root folder. Default is current folder"),
+        option_description_str("--product=<name>", "Required, name will used to generate title of bridging header and for generating"),
+        option_description_str("--output=<path>", "Optional, specifies path to result bridging heaer. Default is current folder"),
+        option_description_str("--filename=<name>", "Optional, use this option to force assign output file name"),
+        option_description_str("--author=<name>", "Optional. Use to provide name as author in comment into output file"),
+        option_description_str("--config=filename", "Generate bridging header with parameters from file"),
+        option_description_str("--help", "Show this help"),
         "",
         "See github page for more details:",
         "https://github.com/SergeyChelak/swift-bridging-header-generator"
